@@ -1,0 +1,115 @@
+
+-> Github: it is cloud based repository to store source code & its files, hosted in web (same as GooleDrive)
+  
+-> pls create github account 
+   https://github.com/
+
+-> Git: version control tool/software, to access the github & its source files designed to manage all source code history. It can keep a history of commits, can reverse the changes and lets developers share code.
+
+-> Install git tool in system to apply git commands through cmd/terminal
+   https://git-scm.com/downloads
+
+-> Open cmd
+      git version                               ( to check verion )
+      
+                                                (need to login to git in sytem with github creds newly)
+      git config --global user.name "your name" 
+      git config --global user.email "your.name@domain.com"
+
+Creating Repository in Github :
+---------------------------
+Repository:  similar to folder, to store the source code.
+
+Repository -> New -> 
+   Enter Repo Name :  java-files
+   Description:
+   Public/Private: 
+  
+  ->click on Create Repository 
+
+we can upload files to github through manual upload or dragndrop or through git commands via cmnd
+
+To push the code from local/computer to remote github:
+-----------------------------------------------
+
+-> create repository in github refer above
+-> open cmd from local path where the source code is available
+      type :  cmd + enter       (type cmd at path name)
+      opens terminal
+
+-> Git commands:
+  #Push
+  
+     git init           (to intialize empty .git repostory in local work directory)
+     git status         (red color: unstagged area , means not ready for push or not added)
+
+     git add .          (to add all files in single shot)
+     git add <filepath> (to add specific files as per our choice)
+     git add -p         (to add specific lines from code file)
+
+     git status         (green color: stagging area, means which is ready for push or added)
+
+     git commit -m "first commit"  
+                        (commiting to remote GitHub with custom mssg for the above added files, -m = mssg)
+
+     git branch -M main (-M automatically renames the master branch to main in local, now above commited code in local main)
+
+
+     git remote add origin https://github.com/Kranthi-45/git-learning.git
+                        (github remote repo url where we want to push)
+
+     git push -u origin main
+                        (push the commited code in local main branch to remote repo)
+
+
+To pull the code from remote github to local work directory
+----------------------------------------------------
+  #clone      				(only onetime when we copy code firstime)
+     git clone <remote_repo_url>
+     git clone https://github.com/Kranthi-45/React-Spring-MovieProject.git
+ 
+  #Pull					(from nextonwards will pull only latest/new changes)
+     git pull origin <brain_name>
+     ex: git pull origin main
+
+     
+
+#other Git commands:
+--------------------
+
+    del .git                     (to del empty .git repo created in sytem)
+    git branch                   (to show all branches in local)
+    git branch -a                (to show all local & remote branches)
+  
+    git branch -M <branch_name>  (to rename main/parent branch to our desired branch name)
+    ex:  
+  	git branch -M main
+	git branch -M master
+        git branch -M development
+
+        main or master or development    -   main or parent branch
+
+    
+    git fetch origin              (to fetch new branches from remote)
+
+
+
+linux commands:
+---------------
+
+     ls          (to list all the files in specified location)
+     ls -a       (to list all files & along with hidden)
+     cd          (change directory)
+     cd ..       (to go back onestep)
+     clear       (to clear terminal)
+
+
+
+
+
+
+
+
+
+
+
